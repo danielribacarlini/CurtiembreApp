@@ -1,0 +1,13 @@
+C:\Users\Fly\source\repos\CurtiembreApp\UIWeb\obj\Debug\netcoreapp2.0\UIWeb.csprojResolveAssemblyReference.cache
+C:\Users\Fly\source\repos\CurtiembreApp\UIWeb\obj\Debug\netcoreapp2.0\UIWeb.csproj.CoreCompileInputs.cache
+C:\Users\Fly\source\repos\CurtiembreApp\UIWeb\obj\Debug\netcoreapp2.0\UIWeb.AssemblyInfoInputs.cache
+C:\Users\Fly\source\repos\CurtiembreApp\UIWeb\obj\Debug\netcoreapp2.0\UIWeb.AssemblyInfo.cs
+C:\Users\Fly\source\repos\CurtiembreApp\UIWeb\bin\Debug\netcoreapp2.0\UIWeb.deps.json
+C:\Users\Fly\source\repos\CurtiembreApp\UIWeb\bin\Debug\netcoreapp2.0\UIWeb.runtimeconfig.json
+C:\Users\Fly\source\repos\CurtiembreApp\UIWeb\bin\Debug\netcoreapp2.0\UIWeb.runtimeconfig.dev.json
+C:\Users\Fly\source\repos\CurtiembreApp\UIWeb\bin\Debug\netcoreapp2.0\UIWeb.dll
+C:\Users\Fly\source\repos\CurtiembreApp\UIWeb\bin\Debug\netcoreapp2.0\UIWeb.pdb
+C:\Users\Fly\source\repos\CurtiembreApp\UIWeb\bin\Debug\netcoreapp2.0\Entities.dll
+C:\Users\Fly\source\repos\CurtiembreApp\UIWeb\bin\Debug\netcoreapp2.0\Entities.pdb
+C:\Users\Fly\source\repos\CurtiembreApp\UIWeb\obj\Debug\netcoreapp2.0\UIWeb.dll
+C:\Users\Fly\source\repos\CurtiembreApp\UIWeb\obj\Debug\netcoreapp2.0\UIWeb.pdb
