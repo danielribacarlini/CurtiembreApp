@@ -11,3 +11,5 @@ C:\Users\Fly\source\repos\CurtiembreApp\UIWeb\bin\Debug\netcoreapp2.0\Entities.d
 C:\Users\Fly\source\repos\CurtiembreApp\UIWeb\bin\Debug\netcoreapp2.0\Entities.pdb
 C:\Users\Fly\source\repos\CurtiembreApp\UIWeb\obj\Debug\netcoreapp2.0\UIWeb.dll
 C:\Users\Fly\source\repos\CurtiembreApp\UIWeb\obj\Debug\netcoreapp2.0\UIWeb.pdb
+C:\Users\Fly\source\repos\CurtiembreApp\UIWeb\bin\Debug\netcoreapp2.0\Services.dll
+C:\Users\Fly\source\repos\CurtiembreApp\UIWeb\bin\Debug\netcoreapp2.0\Services.pdb

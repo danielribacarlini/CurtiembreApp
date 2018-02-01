@@ -4,11 +4,16 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2>Lista Subpartidas</h2>
+<h3>Partida: @ViewData["PartidaID"]</h3>
+<hr />
+@if (ViewData["CantSinClasificar"] != null)
+{
+    <p>
+    <a asp-action="Create" asp-route-id="@ViewData["PartidaID"]">Create New <span class="badge badge-light">@ViewData["CantSinClasificar"]</span></a>
+    </p>
+}
 
-<p>
-    <a asp-action="Create" asp-route-id="@ViewData["PartidaID"]">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>

@@ -6,22 +6,29 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Entities;
+using Services;
 
 namespace UIWeb.Controllers
 {
     public class SubPartidasController : Controller
     {
         private readonly Context _context;
+        private SubPartidasServices _subPartidaServices;
+        private PartidasServices _partidasServices;
 
-        public SubPartidasController(Context context)
+        public SubPartidasController(Context context, SubPartidasServices subPartidaServices, PartidasServices partidasServices)
         {
             _context = context;
+            _subPartidaServices = subPartidaServices;
+            _partidasServices = partidasServices;
         }
 
         // GET: SubPartidas
         public async Task<IActionResult> Index(int? id)
         {
             ViewData["PartidaID"] = id;
+            var cantSinClasificar = _context.Partidas.Where(x => x.ID == id).Select(x=> x.CantSinClasificar).FirstOrDefault();
+            ViewData["CantSinClasificar"] = cantSinClasificar;
             var context = _context.SubPartidas.Include(s => s.Partida).Where(s => s.PartidaID == id).Include(s => s.Pedido);
             return View(await context.ToListAsync());
         }
@@ -64,14 +71,16 @@ namespace UIWeb.Controllers
         {
             if (ModelState.IsValid)
             {
-                
+
+                var partida = await _context.Partidas.FirstOrDefaultAsync(x => x.ID == subPartida.PartidaID);
+                partida.CantSinClasificar = partida.CantSinClasificar - subPartida.CantCueros;
                 _context.Add(subPartida);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", new { id = subPartida.PartidaID });
             }
             ViewData["PartidaID"] = new SelectList(_context.Partidas, "ID", "ID", subPartida.PartidaID);
             ViewData["PedidoID"] = new SelectList(_context.Pedidos, "ID", "ID", subPartida.PedidoID);
-            return View(subPartida);
+            return RedirectToAction("Index", new { id = subPartida.PartidaID });
         }
 
         // GET: SubPartidas/Edit/5
@@ -152,12 +161,17 @@ namespace UIWeb.Controllers
         // POST: SubPartidas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int id, int PartidaID, int CantCueros)
         {
+            var partida = _partidasServices.GetByID(PartidaID);
+            partida.CantSinClasificar = partida.CantSinClasificar + CantCueros;
+            _partidasServices.Update(partida);
+
+
             var subPartida = await _context.SubPartidas.SingleOrDefaultAsync(m => m.ID == id);
             _context.SubPartidas.Remove(subPartida);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index", new { id = subPartida.PartidaID });
         }
 
         private bool SubPartidaExists(int id)

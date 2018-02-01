@@ -1,13 +1,14 @@
-﻿@model IEnumerable<Entities.Partida>
+﻿@using Entities;
+@model IEnumerable<Entities.Partida>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2>Lista de Partidas</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Agregar nueva </a>
 </p>
 <table class="table">
     <thead>
@@ -33,10 +34,14 @@
                 <th>
                     @Html.DisplayNameFor(model => model.SubPartidas)
                 </th>
+                <th>
+                    Acciones
+                </th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.PesoPromedio)
@@ -57,17 +62,54 @@
                 @Html.DisplayFor(modelItem => item.FechaIngreso)
             </td>
             <td>
-                @if (item.SubPartidas == null)
-                {
-                    <a asp-controller="SubPartidas" asp-route-id="@item.ID">Clasificar</a>
-                }
+                @{if (item.SubPartidas == null)
+                    {
+                        <a asp-controller="SubPartidas" asp-route-id="@item.ID">Clasificar</a>
+                    }
+                    else
+                    {
+                        <script>
+                            function myFunction() {
+                                var x = $("#SelectedCountryId option:selected").val();
+
+                                document.getElementById("demo").innerHTML = x;
+                                }
+                        </script>
+                        <table>
+                            <tr>
+                                <td>
+                                    <a asp-controller="SubPartidas" asp-action="Details" asp-route-id="26">Ver</a> &nbsp
+                                </td>
+                                <td>
+                                    <select id="ddl1" asp-for="@item.ID" class="form-control"
+                                            asp-items="@(new SelectList(
+                                                            item.SubPartidas.Select(x=> new {
+                                                                full = "ID: "+x.ID + " " +"Cant: "+ x.CantCueros,
+                                                                ID = x.ID,
+                                                                }),
+                                                            "ID", "full"))">
+                                        <option selected="selected" value="@item.ID">Please select</option>
+                                    </select>
+                                </td>
+                            <tr />
+                        </table>
+                    }
+                  }
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                @if (item.CantSinClasificar != item.Cantidad)
+                 {
+                   <a asp-controller="SubPartidas" asp-route-id="@item.ID"> | Agregar Sub-Partida</a>
+                 }
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>

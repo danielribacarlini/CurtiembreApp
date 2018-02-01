@@ -6,22 +6,29 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Entities;
+using Services;
 
 namespace UIWeb.Controllers
 {
     public class PartidasController : Controller
     {
         private readonly Context _context;
+        private PartidasServices _partidasServices;
+        
 
-        public PartidasController(Context context)
+        public PartidasController(Context context, PartidasServices partidasServices)
         {
             _context = context;
+            _partidasServices = partidasServices;
+
         }
 
         // GET: Partidas
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Partidas.ToListAsync());
+            return View( _partidasServices.GetAllId());
+
+            //return View(await _context.Partidas.ToListAsync());
         }
 
         // GET: Partidas/Details/5
@@ -53,10 +60,11 @@ namespace UIWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,PesoPromedio,Cantidad,CantSinClasificar,Observaciones,Tipo,FechaIngreso")] Partida partida)
+        public async Task<IActionResult> Create([Bind("ID,PesoPromedio,Cantidad,Observaciones,Tipo,FechaIngreso")] Partida partida)
         {
             if (ModelState.IsValid)
             {
+                partida.CantSinClasificar = partida.Cantidad;
                 _context.Add(partida);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

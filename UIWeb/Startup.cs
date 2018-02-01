@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Services;
 
 namespace UIWeb
 {
@@ -26,6 +27,9 @@ namespace UIWeb
             services.AddDbContext<Context>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc();
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped(typeof(PartidasServices));
+            services.AddScoped(typeof(SubPartidasServices));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
