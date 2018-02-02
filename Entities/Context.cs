@@ -22,8 +22,9 @@ namespace Entities
         public DbSet<ProcesoHumedo> ProcesosHumedos { get; set; }
         public DbSet<Operario> Operarios { get; set; }
         public DbSet<RecetaHumeda> RecetaHumedas { get; set; }
-        public DbSet<ItemReceta> ItemsReceta { get; set; }
+        public DbSet<ItemSubProceso> ItemsReceta { get; set; }
         public DbSet<Insumo> Insumos { get; set; }
+        public DbSet<SubProceso> SubProcesos { get; set; }
 
     }
 }

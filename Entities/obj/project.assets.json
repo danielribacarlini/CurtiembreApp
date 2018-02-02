@@ -5861,8 +5861,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Fly\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Users\\daniel.a.riba\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -5871,20 +5870,18 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fly\\source\\repos\\CurtiembreApp\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\daniel.a.riba\\Documents\\CurtiembreApp\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\Fly\\source\\repos\\CurtiembreApp\\Entities\\Entities.csproj",
-      "packagesPath": "C:\\Users\\Fly\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fly\\source\\repos\\CurtiembreApp\\Entities\\obj\\",
+      "projectPath": "C:\\Users\\daniel.a.riba\\Documents\\CurtiembreApp\\Entities\\Entities.csproj",
+      "packagesPath": "C:\\Users\\daniel.a.riba\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\daniel.a.riba\\Documents\\CurtiembreApp\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Fly\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\daniel.a.riba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"

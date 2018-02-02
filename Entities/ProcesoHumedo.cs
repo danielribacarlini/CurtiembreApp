@@ -22,6 +22,7 @@ namespace Entities
 
         public SubPartida SubPartida { get; set; }
         public RecetaHumeda RecetaHumeda { get; set; }
+        public ICollection<SubProceso> SubProcesos { get; set; }
 
     }
 }

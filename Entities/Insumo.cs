@@ -10,7 +10,7 @@ namespace Entities
         public int Descripcion { get; set; }
         public int Stock { get; set; }
 
-        public ICollection<ItemReceta> ItemReceta { get; set; }
+        public ICollection<ItemSubProceso> ItemReceta { get; set; }
 
     }
 }

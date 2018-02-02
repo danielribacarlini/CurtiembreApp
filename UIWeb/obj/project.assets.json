@@ -13161,30 +13161,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Fly\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Users\\daniel.a.riba\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fly\\source\\repos\\CurtiembreApp\\UIWeb\\UIWeb.csproj",
+      "projectUniqueName": "C:\\Users\\daniel.a.riba\\Documents\\CurtiembreApp\\UIWeb\\UIWeb.csproj",
       "projectName": "UIWeb",
-      "projectPath": "C:\\Users\\Fly\\source\\repos\\CurtiembreApp\\UIWeb\\UIWeb.csproj",
-      "packagesPath": "C:\\Users\\Fly\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fly\\source\\repos\\CurtiembreApp\\UIWeb\\obj\\",
+      "projectPath": "C:\\Users\\daniel.a.riba\\Documents\\CurtiembreApp\\UIWeb\\UIWeb.csproj",
+      "packagesPath": "C:\\Users\\daniel.a.riba\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\daniel.a.riba\\Documents\\CurtiembreApp\\UIWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Fly\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\daniel.a.riba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -13196,11 +13190,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\Fly\\source\\repos\\CurtiembreApp\\Services\\Services.csproj": {
-              "projectPath": "C:\\Users\\Fly\\source\\repos\\CurtiembreApp\\Services\\Services.csproj"
+            "C:\\Users\\daniel.a.riba\\Documents\\CurtiembreApp\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\daniel.a.riba\\Documents\\CurtiembreApp\\Entities\\Entities.csproj"
             },
-            "C:\\Users\\Fly\\source\\repos\\CurtiembreApp\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Fly\\source\\repos\\CurtiembreApp\\Entities\\Entities.csproj"
+            "C:\\Users\\daniel.a.riba\\Documents\\CurtiembreApp\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\daniel.a.riba\\Documents\\CurtiembreApp\\Services\\Services.csproj"
             }
           }
         }

@@ -4,15 +4,16 @@ using System.Text;
 
 namespace Entities
 {
-    public class ItemReceta
+    public class ItemSubProceso
     {
         public int ID { get; set; }
-        public int RecetaID { get; set; }
+        public int SubProcesoID { get; set; }
         public int InsumoID { get; set; }
         public int Cantidad { get; set; }
-        public decimal Tiempo { get; set; }
+        public decimal Porcentaje { get; set; }
+        public decimal KgG { get; set; }
 
-        public RecetaHumeda RecetaHumeda { get; set; }
+        public SubProceso SubProceso { get; set; }
         public Insumo Insumo { get; set; }
     }
 }

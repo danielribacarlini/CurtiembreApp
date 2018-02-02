@@ -10,6 +10,6 @@ namespace Entities
         public int ProcesoHumedoID { get; set; }
 
         public ProcesoHumedo ProcesoHumedo { get; set; }
-        public ICollection<ItemReceta> ItemsReceta { get; set; }
+        public ICollection<ItemSubProceso> ItemsSubProcesos { get; set; }
     }
 }
